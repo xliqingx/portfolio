@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Narrative Games Portfolio</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+      color: #1a1a18;
+      background: #f5f4f0;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid #e0dfd8;
+    }
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1a1a18;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      font-size: 1.125rem;
+      color: #5F5E5A;
+      margin-bottom: 1.5rem;
+    }
+    .intro {
+      font-size: 1.0625rem;
+      color: #1a1a18;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+      text-align: center;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.875rem 2rem;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #58CC02;
+      color: #fff;
+      border: none;
+    }
+    .btn-primary:hover {
+      background: #46A302;
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: #fff;
+      color: #58CC02;
+      border: 2px solid #58CC02;
+    }
+    .btn-secondary:hover {
+      background: #f0f9e8;
+    }
+    .design-doc {
+      margin-top: 3rem;
+      padding-top: 3rem;
+      border-top: 1px solid #e0dfd8;
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #1a1a18;
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+    }
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a18;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      color: #1a1a18;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    strong {
+      font-weight: 600;
+      color: #1a1a18;
+    }
+    em {
+      font-style: italic;
+    }
+    .footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e0dfd8;
+      text-align: center;
+      color: #5F5E5A;
+      font-size: 0.9375rem;
+    }
+    .contact {
+      margin-top: 0.5rem;
+    }
+    .contact a {
+      color: #58CC02;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    .game-card {
+      background: #f5f4f0;
+      border-radius: 12px;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .game-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .game-card h3 {
+      margin-top: 0;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    .game-desc {
+      flex: 1;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+    .game-meta {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+    .tag {
+      background: #fff;
+      color: #5F5E5A;
+      padding: 0.375rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+    }
+    .game-card .btn {
+      width: 100%;
+      text-align: center;
+    }
+    @media (max-width: 640px) {
+      .container {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+      .buttons {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Narrative Games Portfolio</h1>
+      <p class="subtitle">by Liqing Xu</p>
+      
+      <div class="games-grid">
+        <div class="game-card">
+          <h3>Qiu: Say My Name</h3>
+          <p class="game-desc">A mini lesson in self-advocacy. Qiu, a sharp and sarcastic mentor, guides you through correcting a coworker who keeps mispronouncing your name. Learn to set boundaries through authentic social friction.</p>
+          <a href="name-game.html" class="btn btn-primary" target="_blank">▶ Play Demo</a>
+        </div>
+        
+        <div class="game-card">
+          <h3>Ex-orcism</h3>
+          <p class="game-desc">A spooky narrative game about a young woman who must confront her exes before her wedding night.</p>
+          <a href="https://wandermayer.itch.io/ex-orcism" class="btn btn-primary" target="_blank">▶ Play on itch.io</a>
+        </div>
+      </div>
+      
+      <div class="buttons" style="margin-top: 2rem;">
+        <a href="#design-doc" class="btn btn-secondary">Read Design Doc for Say My Name</a>
+      </div>
+    </div>
+
+    <div class="design-doc" id="design-doc">
+      <h2>Design Choices Document</h2>
+
+      <h3>The Problem</h3>
+      <p>Mispronounced names are a low-stakes-feeling situation that actually carries heavy emotional weight, and it's something that I personally encounter quite frequently. Name mispronunciation is a recurring identity negotiation that, when added up over time, can slowly break someone down. When someone mispronounces your name, it creates discomfort for both the speaker and the named, and there's no easy way out. It requires learnable advocacy skills. This game lesson prototype uses Duolingo's scaffolded choice architecture to teach assertiveness through authentic social friction with a unique character who guides you through your choices.</p>
+
+      <h3>The Character: Qiu</h3>
+      <p><strong>Archetype:</strong> The Blunt Mentor with Tough Love</p>
+      
+      <p>Qiu is a critically endangered <em>sibuxiang</em> deer—rare, hard to pronounce, frequently misidentified. She is the perfect metaphor for name advocacy because she has already lived this.</p>
+
+      <p><strong>Voice Principles:</strong></p>
+      <ul>
+        <li><strong>Uncompromising and strong sense of self.</strong> Qiu cares enough to tell you the truth. She has high standards, iron-clad boundaries and knows that she is worth taking up space in a room.</li>
+        <li><strong>Slightly impatient and judgmental.</strong> Qiu's name has been mispronounced a million times. This is old hat to her. Therefore, she has little patience for nonsense. She's designed to be this way to give you, the player, maximum space to feel those feelings of impatience, too, and to know you have a right to feel that way.</li>
+        <li><strong>Dry sense of humor and sarcastic wit.</strong> Qiu uses humor to deflect tension, highlight absurdity, and to make a point. If it's directed at you, it's because she wants you to be better, not to judge or shame you.</li>
+      </ul>
+
+      <h3>Mechanical Innovation: Personalized Discomfort</h3>
+      <p><strong>The Name Input Screen:</strong> Players type their actual name and its common mispronunciation. The game dynamically inserts these throughout all dialogue, transforming generic scenarios into personal ones.</p>
+
+      <h3>Design Philosophy</h3>
+      
+      <p><strong>Small moments, big patterns.</strong> Each scenario is &lt;30 seconds, but together they build muscle memory for self-advocacy. The game doesn't lecture about systemic issues—it simulates the emotional labor of correcting someone for the third time this week.</p>
+
+      <p><strong>Character is curriculum.</strong> Qiu's voice isn't flavor text. Her dry observations teach players to recognize people-pleasing, over-apologizing, and preemptive boundary collapse. She models the internal monologue you need to develop.</p>
+
+      <p><strong>Discomfort is the point.</strong> The best learning happens at the edge of your comfort zone. By letting players fail with Qiu watching, the game creates safe space to practice being uncomfortable—which is exactly what advocacy requires.</p>
+    </div>
+
+    <div class="footer">
+      <p><strong>Created by:</strong> Liqing Xu</p>
+      <p class="contact"><a href="mailto:xliqingx@gmail.com">xliqingx@gmail.com</a> | <a href="https://www.linkedin.com/in/liqingxu/" target="_blank">LinkedIn</a></p>
+    </div>
+  </div>
+</body>
+</html>
